@@ -1,9 +1,10 @@
 Nmea stand for National Marine Electronics Association. Most computer programs transfer the gps data into nmea format. we can convert the NMEA data to decimal Latitude and Latitude for our ease.
+
 **Data sample:**
 $GNRMC,071100.20,A,2835.9620695,N,07719.9163150,E,0.02,,220518,,,D*5A
 
 ```java
-	public void parseReceiveData(String nmeaData) {  
+public void parseReceiveData(String nmeaData) {  
     String[] nmeaDataArray = nmeaData.split(",");  
     if (nmeaDataArray[0].equals("$GNRMC") &&  
             nmeaDataArray[3] != null &&  
